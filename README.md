@@ -4,7 +4,9 @@ An example of a Gradle plugin that generates jOOQ Java classes for a Postgres da
 
 ## How it works
 
-* Starts a Postgres database container.
+It starts a separate JVM process which:
+
+* Starts a Postgres database container (uses Testcontainers).
 * Runs Flyway migrations to initialize the database schema.
 * Generates jOOQ Java classes from the database schema using the jOOQ code generator.
 * Cleans up the database container after the code generation is complete.
@@ -22,6 +24,7 @@ The jOOQ sources will be generated in `sample-project/build/generated/sources/jo
 ## Usage
 
 Full example in `sample-project/`:
+
 ```groovy
 plugins {
     id 'java'
