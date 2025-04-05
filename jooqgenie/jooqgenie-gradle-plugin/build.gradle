@@ -1,0 +1,20 @@
+plugins {
+    id 'java-gradle-plugin'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation gradleApi()
+}
+
+gradlePlugin {
+    plugins {
+        create('jooqGenie') {
+            id = 'jooqGenie'
+            implementationClass = 'jooqgenie.JooqGeniePlugin'
+        }
+    }
+}

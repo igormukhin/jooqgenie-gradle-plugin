@@ -1,0 +1,4 @@
+rootProject.name = 'jooqgenie'
+
+include 'sample-project'
+includeBuild 'jooqgenie'

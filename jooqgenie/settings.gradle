@@ -1,0 +1,12 @@
+rootProject.name = 'jooqgenie'
+
+include 'jooqgenie-gradle-plugin'
+include 'jooqgenie-tool'
+
+dependencyResolutionManagement {
+    versionCatalogs {
+        libs {
+            from(files("../gradle/libs.versions.toml"))
+        }
+    }
+}

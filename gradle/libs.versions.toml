@@ -1,0 +1,16 @@
+[versions]
+testcontainers = "1.20.6"
+flyway = "11.5.0"
+jooq = "3.20.2"
+postgresql = "42.7.5"
+logback = "1.5.18"
+
+[libraries]
+logbackClassic = { group = "ch.qos.logback", name = "logback-classic", version.ref = "logback" }
+testcontainersPostgresql = { group = "org.testcontainers", name = "postgresql", version.ref = "testcontainers" }
+flywayCore = { group = "org.flywaydb", name = "flyway-core", version.ref = "flyway" }
+flywayPostgresql = { group = "org.flywaydb", name = "flyway-database-postgresql", version.ref = "flyway" }
+jooq = { group = "org.jooq", name = "jooq", version.ref = "jooq" }
+jooqCodegen = { group = "org.jooq", name = "jooq-codegen", version.ref = "jooq" }
+postgresql = { group = "org.postgresql", name = "postgresql", version.ref = "postgresql" }
+

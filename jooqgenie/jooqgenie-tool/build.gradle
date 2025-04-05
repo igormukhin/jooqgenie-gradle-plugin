@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation libs.testcontainersPostgresql
+
+    implementation libs.flywayCore
+    runtimeOnly libs.flywayPostgresql
+
+    implementation libs.jooq
+    implementation libs.jooqCodegen
+    implementation libs.flywayPostgresql
+
+    runtimeOnly libs.logbackClassic
+    runtimeOnly libs.postgresql
+}

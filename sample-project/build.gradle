@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+    id 'jooqGenie'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation libs.jooq
+}
+
+jooqGenie {
+/*
+    Defaults:
+    migrationsDir = layout.projectDirectory.dir('src/main/resources/db/migration')
+    outputDir = layout.buildDirectory.dir('generated/sources/jooq/java/main')
+    databaseImage = 'postgres:latest'
+*/
+    targetPackage = 'example.jooq'
+}
+
